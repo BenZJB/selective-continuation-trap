@@ -1,0 +1,123 @@
+
+================================================================================
+RUNNING inspect raw archives
+================================================================================
+
+=== Metadata / Operation ===
+CSV members: 119
+Example: 00_Batch_Distillation_Plant_M-202210_Timeseries_Label_Anomaly_Metadata/Operation/batch_dist_binary_ethanol+propan-2-ol/operating_point_001/test_anormal_experiment_001.csv
+Shape: (2854, 2)
+Columns: ['Time', 'Label (anomaly)']
+    Time  Label (anomaly)
+12:06:55                0
+12:06:56                0
+12:06:57                0
+
+=== Sensors / Operation ===
+CSV members: 119
+Example: 01_Batch_Distillation_Plant_M-202210_Timeseries_Sensors/Operation/batch_dist_binary_ethanol+propan-2-ol/operating_point_001/test_anormal_experiment_001.csv
+Shape: (2854, 19)
+Columns: ['Time', 'LS701', 'LS702', 'T701', 'T702', 'T703', 'T704', 'T706', 'T708', 'T709', 'T711', 'T712', 'T705', 'FT703', 'FT704', 'PDI701', 'PDI702', 'PY23', 'FYI702']
+    Time  LS701  LS702   T701  T702   T703  T704   T706  T708  T709  T711  T712   T705  FT703  FT704  PDI701  PDI702    PY23   FYI702
+12:06:55    1.0    1.0 396.85 57.90 52.885 57.90 57.885  57.9  52.3 51.25 51.45 51.555 0.9050  0.024  -0.215    3.10 300.020 7.216591
+12:06:56    1.0    1.0 397.00 58.00 52.920 58.00 57.930  57.9  52.3 51.20 51.40 51.600 0.3010  0.045  -0.200    3.10 299.820 7.331394
+12:06:57    1.0    1.0 396.90 57.85 52.900 57.85 57.855  57.9  52.3 51.25 51.45 51.550 0.3755  0.053  -0.265    3.05 299.935 7.419620
+
+=== Actuators / Operation ===
+CSV members: 119
+Example: 02_Batch_Distillation_Plant_M-202210_Timeseries_Actuators/Operation/batch_dist_binary_ethanol+propan-2-ol/operating_point_001/test_anormal_experiment_001.csv
+Shape: (2854, 14)
+Columns: ['Time', 'H701', 'H702', 'H706', 'H704', 'H708', 'H002', 'AV8', 'AV709', 'P301', 'AV716', 'TV1', 'P701', 'P702']
+    Time  H701  H702  H706  H704  H708  H002  AV8  AV709  P301  AV716   TV1    P701      P702
+12:06:55 175.0  9.75   6.0  6.00  5.25     0  1.0    1.0   1.0    1.0 35.60 0.97000 14.066667
+12:06:56 175.0  9.00   6.0  6.00  6.00     0  1.0    1.0   1.0    1.0 34.50 1.20625  6.013333
+12:06:57 175.0  9.75   6.0  6.75  6.00     0  1.0    1.0   1.0    1.0 34.85 1.29625  7.006667
+
+=== Operation logs ===
+CSV members: 106
+Example: 07_Batch_Distillation_Plant_M-202210_Tabular_Operation_Logs/batch_dist_ternary_acetone+butan-1-ol+methanol/operating_point_001/test_anormal_experiment_001.csv
+Shape: (38, 4)
+Columns: ['Time', 'Property', 'Value', 'ID']
+    Time                        Property Value  ID
+09:10:48             Changed value AV716     1   -
+09:33:29             Selected Experiment   211 NaN
+09:33:38 Opened window with recipe steps     -   -
+
+=== GC / timeseries ===
+CSV members: 100
+Example: 10_Batch_Distillation_Plant_M-202210_GC_Composition/timeseries/batch_dist_binary_ethanol+propan-2-ol/operating_point_001/test_anormal_experiment_001.csv
+Shape: (2854, 11)
+Columns: ['time', 'propan-2-ol_mol_V001', 'ethanol_mol_V001', 'propan-2-ol_mol_V002', 'ethanol_mol_V002', 'data_quality_V001', 'data_quality_V002', 'mass_loss_V001', 'mass_loss_V002', 'mass_loss_quality_V001', 'mass_loss_quality_V002']
+    time  propan-2-ol_mol_V001  ethanol_mol_V001  propan-2-ol_mol_V002  ethanol_mol_V002  data_quality_V001  data_quality_V002  mass_loss_V001  mass_loss_V002  mass_loss_quality_V001  mass_loss_quality_V002
+12:06:55              0.296425          0.703575                   NaN               NaN                  2                  0             5.2             0.0                     0.0                     NaN
+12:06:56              0.296438          0.703562                   NaN               NaN                  2                  0             5.2             0.0                     0.0                     NaN
+12:06:57              0.296451          0.703549                   NaN               NaN                  2                  0             5.2             0.0                     0.0                     NaN
+
+================================================================================
+RUNNING build run table
+================================================================================
+Completed: output shape (119, 21)
+
+================================================================================
+RUNNING build endpoints
+================================================================================
+Completed: output shape (100, 8)
+
+================================================================================
+RUNNING build prefix features
+================================================================================
+Completed: output shape (300, 225)
+
+================================================================================
+RUNNING endpoint check
+================================================================================
+GC endpoint coverage by mixture:
+                                                 count      mean       std       min       max
+mixture                                                                                       
+batch_dist_binary_ethanol+propan-2-ol                1  0.855884       NaN  0.855884  0.855884
+batch_dist_ternary_acetone+butan-1-ol+methanol      23  0.650138  0.118517  0.510361  0.853623
+batch_dist_ternary_butan-1-ol+propan-2-ol+water     74  0.681785  0.087106  0.433986  0.987015
+
+Primary mixture usable endpoints: 74
+IMPORTANT: final V002 purity is an exploratory proxy, not yet the final process-economic objective.
+
+================================================================================
+RUNNING prefix predictability
+================================================================================
+ prefix_fraction  n_runs      mae     rmse  spearman
+             0.1      74 0.056938 0.093038  0.433040
+             0.2      74 0.057439 0.090927  0.328308
+             0.4      74 0.060101 0.090374  0.361333
+
+Saved held-out predictions to /mnt/data/selective_continuation_trap/results/tables/02_oof_prefix_predictions.csv
+
+================================================================================
+RUNNING late bloomers
+================================================================================
+ prefix_fraction  n_runs  n_valuable  n_late_bloomer_candidates  late_bloomer_fraction_of_valuable
+             0.1      74          15                          3                           0.200000
+             0.2      74          15                          8                           0.533333
+             0.4      74          15                          6                           0.400000
+
+Definition: valuable endpoint (>= training-fold 80th percentile) but early held-out prediction <= training-fold 30th percentile.
+
+================================================================================
+RUNNING censoring replay
+================================================================================
+ stop_quantile              learner  valuable_run_recall  valuable_false_stop_rate  endpoint_selection_bias      mae  spearman
+           0.2       completed_only             0.766667                  0.233333                 0.005732 0.055553  0.340007
+           0.2 oracle_all_endpoints             0.752381                  0.247619                 0.006435 0.058315  0.349146
+           0.2       static_initial             0.678571                  0.321429                 0.002253 0.066700  0.289203
+           0.3       completed_only             0.695238                  0.304762                 0.007849 0.056121  0.319493
+           0.3 oracle_all_endpoints             0.716667                  0.283333                 0.010011 0.058315  0.349146
+           0.3       static_initial             0.654762                  0.345238                 0.009402 0.066700  0.289203
+           0.4       completed_only             0.645238                  0.354762                 0.009537 0.057087  0.298338
+           0.4 oracle_all_endpoints             0.704762                  0.295238                 0.011681 0.058315  0.349146
+           0.4       static_initial             0.654762                  0.345238                 0.008235 0.066700  0.289203
+
+Interpretation gate:
+A convincing trap requires completed_only to deteriorate relative to oracle_all_endpoints across rounds/seeds,
+especially in valuable-run recall, false stops, endpoint-selection bias, and regret. If it does not, do not claim the trap.
+
+Done. Inspect results/tables and results/figures.
+0:34.89

@@ -1,0 +1,171 @@
+plant:
+  name: Batch Distillation Plant V1
+actuator:
+  - id: AV201
+    description: Automatic valve for inline sampling line
+  - id: AV205
+    description: Automatic valve for stopped-flow inline sampling
+  - id: AV709
+    description: Automatic valve for nitrogen supply
+  - id: AV716
+    description: Automatic valve for cooling water supply
+  - id: AV8
+    description: Automatic valve for pressure control
+  - id: CHV1
+    description: Check valve after reflux pump P701
+  - id: CHV2
+    description: Check valve after distillate pump P702
+  - id: H001
+    description: Heating tape
+  - id: H002
+    description: Heating rod
+  - id: H701
+    description: Heating element
+  - id: H702
+    description: Heating element
+  - id: H704
+    description: Heating element
+  - id: H706
+    description: Heating element
+  - id: H708
+    description: Heating element
+  - id: HV001
+    description: Side-draw valve between V001 and C001
+  - id: HV002
+    description: Side-draw valve between C001 and C002
+  - id: HV003
+    description: Side-draw valve between C002 and C003
+  - id: HV004
+    description: Manual valve for sample specimen drawing
+  - id: HV005
+    description: Manual valve for connection of inline sampling line to distillate buffer
+  - id: HV006
+    description: Manual valve for product drain from V003
+  - id: HV007
+    description: Manual valve for ventilation to atmosphere
+  - id: HV008
+    description: Manual valve for liquid drain in HE004
+  - id: HV009
+    description: Manual valve for offline sampling in V001
+  - id: HV101
+    description: Manual valve for nitrogen supply of PDI702
+  - id: HV102
+    description: Manual valve for nitrogen supply of PDI701
+  - id: HV103
+    description: Manual valve, nitrogen pressure regulator
+  - id: HV202
+    description: Manual valve for closing inline sampling line
+  - id: M001
+    description: Magnetic stirrer in V001
+  - id: M701
+    description: Motor unit for lifting table
+  - id: MSC701
+    description: Motor unit for M001
+  - id: P201
+    description: Inline sampling pump
+  - id: P301
+    description: Vacuum pump
+  - id: P701
+    description: Reflux pump
+  - id: P702
+    description: Distillate pump
+  - id: PRV001
+    description: Pressure relief valve at G001
+  - id: PRV201
+    description: Pressure relief valve in front of QR201
+  - id: TCU1
+    description: Circulating thermostat for HE001, HE002, HE003
+  - id: TCU2
+    description: Circulating thermostat for HE004
+  - id: TV1
+    description: Throttle valve for pressure control
+
+equipment:
+  - id: C001
+    description: Column section with structured laboratory packing
+  - id: C002
+    description: Column section with structured laboratory packing
+  - id: C003
+    description: Column section with structured laboratory packing
+  - id: F201
+    description: Filter unit in inline sampling line
+  - id: G001
+    description: Glass unit with multiple ports
+  - id: G002
+    description: Glass unit with multiple ports
+  - id: HE001
+    description: Glass condenser unit with spiral coil and multiple ports
+  - id: HE002
+    description: Glass subcooling unit with spiral coil
+  - id: HE003
+    description: Pre-heating unit, spiral coil above column
+  - id: HE004
+    description: Condensation trap
+  - id: V001
+    description: Reboiler vessel
+  - id: V002
+    description: Buffer vessel
+  - id: V003
+    description: Distillate receiver
+  - id: V201
+    description: Pressure relief collection vessel
+
+sensor:
+  - id: CAM001
+    description: Camera at HE001
+  - id: CAM002
+    description: Camera at V002
+  - id: CAM003
+    description: Camera at V003
+  - id: FT201
+    description: Mass flux sensor
+  - id: FT703
+    description: Mass flux sensor
+  - id: FT704
+    description: Mass flux sensor
+  - id: FYI702
+    description: Flux sensor
+  - id: LS701
+    description: Level sensor
+  - id: LS702
+    description: Level sensor
+  - id: PDI701
+    description: Differential pressure sensor
+  - id: PDI702
+    description: Differential pressure sensor
+  - id: PI2
+    description: Pressure indicator (difference to ambient pressure)
+  - id: PI201
+    description: Pressure indicator in front of QR201
+  - id: PI8
+    description: Pressure indicator for nitrogen supply
+  - id: PY23
+    description: Pressure sensor
+  - id: QR201
+    description: Concentration measurement system, benchtop NMR unit
+  - id: SD001
+    description: Microphone at reflux and distillate pump
+  - id: T001
+    description: Temperature sensor
+  - id: T002
+    description: Temperature sensor
+  - id: T701
+    description: Temperature sensor
+  - id: T702
+    description: Temperature sensor
+  - id: T703
+    description: Temperature sensor
+  - id: T704
+    description: Temperature sensor
+  - id: T705
+    description: Temperature sensor
+  - id: T706
+    description: Temperature sensor
+  - id: T708
+    description: Temperature sensor
+  - id: T709
+    description: Temperature sensor
+  - id: T711
+    description: Temperature sensor
+  - id: T712
+    description: Temperature sensor

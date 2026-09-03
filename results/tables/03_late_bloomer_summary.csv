@@ -1,0 +1,4 @@
+prefix_fraction,n_runs,n_valuable,n_late_bloomer_candidates,late_bloomer_fraction_of_valuable
+0.1,74,15,3,0.2
+0.2,74,15,8,0.5333333333333333
+0.4,74,15,6,0.4
